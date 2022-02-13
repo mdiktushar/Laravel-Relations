@@ -42,9 +42,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function address(Type $var = null)
+
+    public function posts(Type $var = null)
     {
         # code...
-        return $this->hasOne(Address::class);
+        return $this->hasMany(Post::class);
     }
 }

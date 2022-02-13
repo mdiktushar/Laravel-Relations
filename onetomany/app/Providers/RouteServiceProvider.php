@@ -46,10 +46,9 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
-
-            Route::middleware('web') //Created route folder for one to one connection.
-            ->namespace($this->namespace)
-            ->group(base_path('routes/oneToOne_Route.php'));
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/manyToMany.php'));
         });
     }
 
